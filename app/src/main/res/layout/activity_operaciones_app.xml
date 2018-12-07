@@ -106,12 +106,13 @@
         android:textStyle="bold" />
 
     <RadioGroup
+        android:id="@+id/radioButton"
         android:layout_width="match_parent"
-        android:layout_height="261dp"
+        android:layout_height="81dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="184dp"
         android:orientation="horizontal"
         android:paddingTop="5dp"
         android:paddingBottom="5dp">
@@ -123,7 +124,6 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="190dp"
             android:text="Suma" />
 
         <RadioButton
@@ -132,7 +132,6 @@
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="190dp"
             android:layout_toEndOf="@+id/buttonSuma"
             android:text="Resta" />
 
@@ -142,7 +141,6 @@
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="190dp"
             android:layout_toEndOf="@+id/buttonResta"
             android:text="Multip" />
 
@@ -153,7 +151,6 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="190dp"
             android:layout_marginEnd="19dp"
             android:layout_toEndOf="@+id/buttonMultip"
             android:text="Divis" />
