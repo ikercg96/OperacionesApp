@@ -2,15 +2,19 @@ package multi2_ikercobo.operacionesapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.*;
+
+import multi2_ikercobo.operacionesapp.R;
 
 public class OperacionesApp extends AppCompatActivity {
 
     //Atributos
     private EditText editNum1;
     private EditText editNum2;
-    int n1, n2, rdo;
+    private int n1, n2;
+    private String rdo;
     private EditText editRdo;
     private RadioButton rbSumar;
     private RadioButton rbResta;
@@ -41,17 +45,31 @@ public class OperacionesApp extends AppCompatActivity {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                n1 = Integer.parseInt(editNum1.getText().toString());
-                n2 = Integer.parseInt(editNum2.getText().toString());
+                try {
+                    n1 = Integer.parseInt(editNum1.getText().toString());
+                    n2 = Integer.parseInt(editNum2.getText().toString());
 
+                    if (rbSumar.isChecked()){  //Si esta seleccionado el boton de SUMAR
+                        rdo = Integer.toString(n1 + n2);
+                        editRdo.setText(rdo);
+                    }
+                    else if(rbResta.isChecked()){  //Si esta seleccionado el boton de RESTAR
+                        rdo = Integer.toString(n1 - n2);
+                        editRdo.setText(rdo);
+                    }
 
-                if (rbSumar.isChecked()){  //Si esta seleccionado el boton de SUMAR
-                    rdo = n1 + n2;
-                    editRdo.setText(rdo);
                 }
-                else if(rbResta.isChecked()){  //Si esta seleccionado el boton de RESTAR
-
+                catch(Exception e){
+                    Toast toastError = Toast.makeText(getApplicationContext(), "Error: es necesario rellenar ambos campos", Toast.LENGTH_LONG);
+                    toastError.setGravity(Gravity.CENTER|Gravity.CENTER, 0, 0);
+                    toastError.show();
+                    editRdo.setText("");
                 }
+
+
+
+
+
 
             };
         })
