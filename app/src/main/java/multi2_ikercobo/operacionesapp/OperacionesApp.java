@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.*;
 
 import multi2_ikercobo.operacionesapp.R;
@@ -22,6 +23,7 @@ public class OperacionesApp extends AppCompatActivity {
     private RadioButton rbDivis;
     private Button btnCalcular;
     private Button btnLimpiar;
+    private String mensajeError;
 
 
     @Override
@@ -57,12 +59,55 @@ public class OperacionesApp extends AppCompatActivity {
                         rdo = Integer.toString(n1 - n2);
                         editRdo.setText(rdo);
                     }
+                    else if(rbMultip.isChecked()){
+                        rdo = Integer.toString(n1 * n2);
+                        editRdo.setText(rdo);
+                    }
+                    else if(rbDivis.isChecked()){
+                        if(n2!=0){
+                            Float rdoDiv=( (float)(n1)/(float)(n2));
+                            editRdo.setText(Float.toString(rdoDiv));
+                        }
+                        else{
+                            mensajeError = "Error: el Divisor no puede ser 0";
+                            Toast toastError = Toast.makeText(getApplicationContext(), mensajeError, Toast.LENGTH_LONG);
+                            toastError.setGravity(Gravity.CENTER | Gravity.CENTER, 0, 0);
+                            toastError.show();
+
+                            ViewGroup group = (ViewGroup) toastError.getView();
+                            TextView messageTextView = (TextView) group.getChildAt(0);
+                            messageTextView.setTextSize(20);
+
+                            editRdo.setText("");
+                        }
+
+                    }
+                    else {
+                        mensajeError = "Error: Es necesario seleccionar una operacion";
+                        Toast toastError = Toast.makeText(getApplicationContext(), mensajeError, Toast.LENGTH_LONG);
+                        toastError.setGravity(Gravity.CENTER | Gravity.CENTER, 0, 0);
+                        toastError.show();
+
+                        ViewGroup group = (ViewGroup) toastError.getView();
+                        TextView messageTextView = (TextView) group.getChildAt(0);
+                        messageTextView.setTextSize(20);
+
+                        editRdo.setText("");
+                    }
 
                 }
                 catch(Exception e){
-                    Toast toastError = Toast.makeText(getApplicationContext(), "Error: es necesario rellenar ambos campos", Toast.LENGTH_LONG);
+                    e.printStackTrace();
+
+                    mensajeError = "Error: Es necesario rellenar ambos campos";
+                    Toast toastError = Toast.makeText(getApplicationContext(), mensajeError, Toast.LENGTH_LONG);
                     toastError.setGravity(Gravity.CENTER|Gravity.CENTER, 0, 0);
                     toastError.show();
+
+                    ViewGroup group = (ViewGroup) toastError.getView();
+                    TextView messageTextView = (TextView) group.getChildAt(0);
+                    messageTextView.setTextSize(20);
+
                     editRdo.setText("");
                 }
 
