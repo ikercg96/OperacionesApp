@@ -111,12 +111,21 @@ public class OperacionesApp extends AppCompatActivity {
                     editRdo.setText("");
                 }
 
-
-
-
-
-
             };
-        })
-    ;}
+
+        });
+
+        //Lo que sucede al pulsar el boton Calcular
+        btnLimpiar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                editNum1.setText("");
+                editNum2.setText("");
+                editRdo.setText("");
+
+            }
+        });
+
+
+    }
 }

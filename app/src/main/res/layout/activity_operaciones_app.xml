@@ -98,6 +98,8 @@
         android:layout_marginTop="355dp"
         android:layout_marginEnd="140dp"
         android:autofillHints=""
+        android:clickable="false"
+        android:cursorVisible="false"
         android:ems="10"
         android:focusable="false"
         android:inputType="number"
@@ -126,8 +128,11 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="30dp"
-            android:checked="false"
-            android:text="Suma" />
+            android:background="@drawable/iconosuma"
+            android:backgroundTintMode="screen"
+            android:baselineAligned="false"
+            android:buttonTint="@android:color/transparent"
+            android:textColorLink="@android:color/white" />
 
         <RadioButton
             android:id="@+id/buttonResta"
@@ -136,7 +141,11 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/buttonSuma"
-            android:text="Resta" />
+            android:background="@drawable/iconoresta"
+            android:buttonTint="@android:color/transparent"
+            android:textAlignment="textStart"
+            android:textColorLink="@color/colorPrimaryDark"
+            android:visibility="visible" />
 
         <RadioButton
             android:id="@+id/buttonMultip"
@@ -145,7 +154,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/buttonResta"
-            android:text="Multip" />
+            android:background="@drawable/iconomultiplicacion"
+            android:buttonTint="@android:color/transparent" />
 
         <RadioButton
             android:id="@+id/buttonDivis"
@@ -156,7 +166,8 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="30dp"
             android:layout_toEndOf="@+id/buttonMultip"
-            android:text="Divis" />
+            android:background="@drawable/iconodivision"
+            android:buttonTint="@android:color/transparent" />
 
     </RadioGroup>
 
