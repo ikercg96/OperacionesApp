@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 
-import multi2_ikercobo.operacionesapp.R;
-
 public class OperacionesApp extends AppCompatActivity {
 
     //Atributos
@@ -41,6 +39,41 @@ public class OperacionesApp extends AppCompatActivity {
         rbDivis = findViewById(R.id.buttonDivis);
         btnCalcular = findViewById(R.id.buttonCalcular);
         btnLimpiar = findViewById(R.id.buttonLimpiar);
+
+
+        //Cambia la apariencia del icono al estar pulsado
+        rbSumar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                    rbSumar.setBackgroundResource(R.drawable.iconosumapulsado);
+                    rbResta.setBackgroundResource(R.drawable.iconoresta);
+                    rbMultip.setBackgroundResource(R.drawable.iconomultip);
+                    rbDivis.setBackgroundResource(R.drawable.iconodiv);
+            }
+        });
+        rbResta.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                rbSumar.setBackgroundResource(R.drawable.iconosuma);
+                rbResta.setBackgroundResource(R.drawable.iconorestapulsado);
+                rbMultip.setBackgroundResource(R.drawable.iconomultip);
+                rbDivis.setBackgroundResource(R.drawable.iconodiv);
+            }
+        });
+        rbMultip.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                rbSumar.setBackgroundResource(R.drawable.iconosuma);
+                rbResta.setBackgroundResource(R.drawable.iconoresta);
+                rbMultip.setBackgroundResource(R.drawable.iconomultippulsado);
+                rbDivis.setBackgroundResource(R.drawable.iconodiv);
+            }
+        });
+        rbDivis.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                rbSumar.setBackgroundResource(R.drawable.iconosuma);
+                rbResta.setBackgroundResource(R.drawable.iconoresta);
+                rbMultip.setBackgroundResource(R.drawable.iconomultip);
+                rbDivis.setBackgroundResource(R.drawable.iconodivpulsado);
+            }
+        });
 
 
         //Lo que sucede al pulsar el boton Calcular
@@ -111,11 +144,11 @@ public class OperacionesApp extends AppCompatActivity {
                     editRdo.setText("");
                 }
 
-            };
+            }
 
         });
 
-        //Lo que sucede al pulsar el boton Calcular
+        //Lo que sucede al pulsar el boton Limpiar
         btnLimpiar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 

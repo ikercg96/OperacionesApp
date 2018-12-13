@@ -154,7 +154,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/buttonResta"
-            android:background="@drawable/iconomultiplicacion"
+            android:background="@drawable/iconomultip"
             android:buttonTint="@android:color/transparent" />
 
         <RadioButton
@@ -166,7 +166,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="30dp"
             android:layout_toEndOf="@+id/buttonMultip"
-            android:background="@drawable/iconodivision"
+            android:background="@drawable/iconodiv"
             android:buttonTint="@android:color/transparent" />
 
     </RadioGroup>
