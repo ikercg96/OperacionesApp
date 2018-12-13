@@ -7,29 +7,13 @@
     tools:context=".OperacionesApp">
 
     <TextView
-        android:id="@+id/textTitulo"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="120dp"
-        android:text="Operaciones"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/textNum1"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:text="Número 1"
         android:textSize="18sp" />
 
@@ -41,10 +25,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="140dp"
         android:text=" Resultado:"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textNum2"
@@ -52,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:text="Número 2"
         android:textSize="18sp" />
@@ -64,7 +49,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="90dp"
         android:ems="10"
         android:inputType="number"
         android:selectAllOnFocus="false"
@@ -78,7 +63,7 @@
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="80dp"
         android:ems="10"
         android:inputType="number"
@@ -95,7 +80,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="355dp"
+        android:layout_marginTop="335dp"
         android:layout_marginEnd="140dp"
         android:autofillHints=""
         android:clickable="false"
@@ -106,7 +91,8 @@
         android:selectAllOnFocus="false"
         android:singleLine="false"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/radioButton"
@@ -116,9 +102,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="211dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="11dp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -167,7 +153,8 @@
             android:layout_marginEnd="30dp"
             android:layout_toEndOf="@+id/buttonMultip"
             android:background="@drawable/iconodiv"
-            android:buttonTint="@android:color/transparent" />
+            android:buttonTint="@android:color/transparent"
+            android:textColorLink="@color/colorPrimary" />
 
     </RadioGroup>
 
@@ -180,8 +167,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="70dp"
         android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/colorAccent"
         android:elevation="0dp"
-        android:text="Calcular" />
+        android:text="Calcular"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/buttonLimpiar"
@@ -191,6 +181,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="100dp"
-        android:text="Limpiar" />
+        android:backgroundTint="@color/colorAccent"
+        android:text="Limpiar"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="15sp" />
 
 </RelativeLayout>
