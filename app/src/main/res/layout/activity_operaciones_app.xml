@@ -12,18 +12,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="60dp"
         android:text="Número 1"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textRdo"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentStart="false"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="140dp"
         android:layout_marginTop="300dp"
         android:layout_marginEnd="140dp"
@@ -38,7 +39,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="70dp"
         android:text="Número 2"
         android:textSize="18sp" />
 
@@ -48,7 +49,7 @@
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="90dp"
         android:ems="10"
         android:inputType="number"
@@ -64,7 +65,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="90dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="70dp"
         android:ems="10"
         android:inputType="number"
         android:selectAllOnFocus="false"
@@ -79,6 +80,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="140dp"
         android:layout_marginTop="335dp"
         android:layout_marginEnd="140dp"
@@ -98,22 +100,17 @@
         android:id="@+id/radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="180dp"
-        android:layout_marginEnd="11dp"
         android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/buttonSuma"
-            android:layout_width="75dp"
+            android:layout_width="73dp"
             android:layout_height="70dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="3dp"
             android:background="@drawable/iconosuma"
             android:backgroundTintMode="screen"
             android:baselineAligned="false"
@@ -122,7 +119,7 @@
 
         <RadioButton
             android:id="@+id/buttonResta"
-            android:layout_width="75dp"
+            android:layout_width="73dp"
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="15dp"
@@ -135,7 +132,7 @@
 
         <RadioButton
             android:id="@+id/buttonMultip"
-            android:layout_width="75dp"
+            android:layout_width="73dp"
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="15dp"
@@ -145,12 +142,12 @@
 
         <RadioButton
             android:id="@+id/buttonDivis"
-            android:layout_width="75dp"
+            android:layout_width="73dp"
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="15dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="3dp"
             android:layout_toEndOf="@+id/buttonMultip"
             android:background="@drawable/iconodiv"
             android:buttonTint="@android:color/transparent"
